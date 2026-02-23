@@ -1,3 +1,4 @@
+
 // ===========================
 // script.js — Full-Stack App
 // ===========================
@@ -361,11 +362,10 @@ function renderAccounts() {
       <td>${acc.email}</td>
       <td>${acc.role}</td>
       <td>${acc.verified ? '✅' : '❌'}</td>
-      <td>${acc.blocked ? '<span class="badge bg-danger">Blocked</span>' : ''}</td>
       <td>
         <button class="btn btn-sm btn-outline-primary me-1" onclick="editAccount(${i})">Edit</button>
         <button class="btn btn-sm btn-outline-warning me-1" onclick="resetPassword(${i})">Reset Password</button>
-        <button class="btn btn-sm ${acc.blocked ? 'btn-outline-success' : 'btn-outline-secondary'} me-1" onclick="toggleBlock(${i})">${acc.blocked ? 'Unblock' : 'Block'}</button>
+        
         <button class="btn btn-sm btn-outline-danger" onclick="deleteAccount(${i})">Delete</button>
       </td>
     </tr>
